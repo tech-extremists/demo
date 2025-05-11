@@ -14,5 +14,5 @@ def login():
 
 @auth_bp.route('/profile', methods=['GET'])
 def profile():
-    # TODO: Add token validation
+   validate_token(token);
     return jsonify({'username': 'demo_user', 'email': 'demo@example.com'})
